@@ -102,7 +102,12 @@ field of the other, which is what makes recursive folding possible.
 
 ## License
 
-Apache License 2.0. See `LICENSE`.
+Dual-licensed.
+
+- **Free use** under the [GNU Affero General Public License v3.0](LICENSE).
+- **Commercial license** available for proprietary use without AGPL
+  source-disclosure obligations. See [LICENSE-COMMERCIAL.md](LICENSE-COMMERCIAL.md)
+  or contact qsol.llc@gmail.com.
 
 ## Company
 

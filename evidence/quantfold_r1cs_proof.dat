@@ -1,0 +1,9 @@
+QSOL_R1CS_FOLD_v1
+scheme = nova-style-relaxed-r1cs-fold-pallas
+circuit = w1*w2 = x
+fold_valid = true
+tamper_e_detected = true
+tamper_z_detected = true
+fold_time_us = 275
+cross_term_t = e9ffffff20eb468cdda89409fc98462200000000000000000000000000000040
+evidence_hash = aa4928c3508228e9a23a753ff8a27f230060db8f8dd032af281d9963f66b4326a0e1fcce69e9c7025b4c0c2252f59a93c82c2d1a25baf3ff3998435e58af9f77

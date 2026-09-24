@@ -1,0 +1,13 @@
+[package]
+name = "qsol-nova"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pasta_curves = "0.5"
+ff = "0.13"
+group = "0.13"
+sha3 = "0.10"
+
+[profile.release]
+opt-level = 3

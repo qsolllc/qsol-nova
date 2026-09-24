@@ -1,0 +1,10 @@
+QSOL_COMMITTED_FOLD_v1
+scheme = committed-nova-fold-pallas
+circuit = w1*w2 = x
+verifier_sees_witness = false
+rho = c2e026b2579175770be03d812a7c754d6b61f355fa26274200558aaf3ff4af32
+fold_valid = true
+tamper_detected = true
+folded_r1cs_satisfied = true
+fold_time_us = 5575
+evidence_hash = deeb57c5c313a0e9d12472e71e2d1e13df6441e8d12d2064a3c6892d7f5df734fb7f42e529a745630b1e2f67dde65af5bb0cd278758c53ee2ef0f503ec504dd7

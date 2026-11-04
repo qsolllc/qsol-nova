@@ -22,35 +22,35 @@ def audit_manifest(manifest_path: str):
     manifest_file = Path(manifest_path).resolve()
     if not manifest_file.exists():
         raise FileNotFoundError(f"Manifest path not found: {manifest_file}")
-        
+
     with open(manifest_file, "r", encoding="utf-8") as f:
         manifest_data = json.load(f)
-        
+
     discrepancies = []
     artifacts = manifest_data.get("artifacts", [])
-    
+
     for entry in artifacts:
         raw_path = entry.get("path") or entry.get("fileUri")
         expected_hash = entry.get("sha3_512")
-        
+
         if not raw_path or not expected_hash:
             continue
-            
+
         target_path = normalize_path(raw_path)
-        
+
         if not target_path.exists():
             discrepancies.append({"path": str(target_path), "status": "MISSING"})
             continue
-            
+
         actual_hash = compute_sha3_512(target_path)
         if actual_hash != expected_hash:
             discrepancies.append({
-                "path": str(target_path), 
-                "status": "HASH_MISMATCH", 
-                "expected": expected_hash, 
+                "path": str(target_path),
+                "status": "HASH_MISMATCH",
+                "expected": expected_hash,
                 "actual": actual_hash
             })
-            
+
     return discrepancies
 
 if __name__ == "__main__":
@@ -59,10 +59,12 @@ if __name__ == "__main__":
         if not Path(manifest_target).exists():
             print(f"[!] Warning: Baseline manifest '{manifest_target}' not found. Skipping strict audit.")
             sys.exit(0)
-            
+
         issues = audit_manifest(manifest_target)
         if issues:
             print(f"[FATAL] Integrity verification failed! Detected {len(issues)} discrepancies.")
+            for issue in issues:
+                print(f"  - {issue['path']} [{issue['status']}]")
             sys.exit(1)
         else:
             print("[SUCCESS] All artifacts verified successfully.")

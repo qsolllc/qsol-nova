@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-11-04T09:57:08.975166+00:00",
+  "algorithm": "SHA3-512",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "path": "Cargo.toml",
+      "sha3_512": "f3f1d833324110c177d0dbc6de76073281be4598ea797c7ccf61ba7b2771724945f9c9817319d3a134154f1f80d7114b2fde692b9ffb5f65a707091725354391"
+    },
+    {
+      "path": "scripts/seal_manifests.py",
+      "sha3_512": "60ce73ec797f51abf53eb531bcedc090b301d3936f1125a879549375dadec3b25eb059d4ff64b89631b824e1aee7bc42659990a393a3776de31f5bd9a20b6eae"
+    },
+    {
+      "path": "scripts/workspace_recovery_guard.py",
+      "sha3_512": "b2c0fde07687cda695c205ff13b8452e8c2fee4c41371c155a59ff4dd49c6140c41f5ab1139c9577f15e642d6b48d0573592b240b5fe0cc8d373e7f47111a109"
+    },
+    {
+      "path": "src/bin/fold_committed.rs",
+      "sha3_512": "6a4bbc1ae5f2caf12287f95af61a890512379151b8670c5ff82708ec469dd66acc3ac37e6d5480132ec3e311418ac3c14b8892d43b84d6c435fb232fadd72813"
+    },
+    {
+      "path": "src/bin/fold_r1cs.rs",
+      "sha3_512": "f367b9242dc2c850f37aac6281868c40706bca17e3860d76c5e932b5fdbd7138de0c663e9a237d16e89dabfcf03e9292ee1661bc7fdc3f0798905efbee9d590e"
+    },
+    {
+      "path": "src/main.rs",
+      "sha3_512": "73d496c845dc697243df75fffcce2837fc700d215d9cd2463bf321ae8ee4a3746338c956c386557efcef3bdaa50f95496e3cda0f431ea96ccb637f1c4a1ca615"
+    },
+    {
+      "path": "trufflehog-report.json",
+      "sha3_512": "a69f73cca23a9ac5c8b567dc185a756e97c982164fe25859e0d1dcc1475c80a615b2123af1f5f94c11e3e9402c3ac558f500199d95b6d3e301758586281dcd26"
+    }
+  ]
+}

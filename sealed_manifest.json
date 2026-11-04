@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-11-04T09:57:08.975166+00:00",
+  "timestamp": "2026-11-04T10:01:18.835170+00:00",
   "algorithm": "SHA3-512",
-  "artifact_count": 7,
+  "artifact_count": 8,
   "artifacts": [
     {
       "path": "Cargo.toml",
@@ -9,7 +9,11 @@
     },
     {
       "path": "scripts/seal_manifests.py",
-      "sha3_512": "60ce73ec797f51abf53eb531bcedc090b301d3936f1125a879549375dadec3b25eb059d4ff64b89631b824e1aee7bc42659990a393a3776de31f5bd9a20b6eae"
+      "sha3_512": "ebd0225f238351dce2ff92ada912508f509702af5000e0526cc5aedfbcee5ae110588897a8a6ea5bd0ac61ef91be5c4770dbccd066ee9d90cca99d006a571a43"
+    },
+    {
+      "path": "scripts/verify_ots.py",
+      "sha3_512": "cc24129c602098ebcf88f3f50548e3bf523cb2a90dfbc806d838da6400c594367a881aa3e9532d6990f6d11a72e811a943d09272111efb5696be50ab78e2efca"
     },
     {
       "path": "scripts/workspace_recovery_guard.py",

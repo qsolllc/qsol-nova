@@ -12,6 +12,11 @@ TARGET_GLOBS = [
     "*.toml"
 ]
 
+EXCLUDE_FILES = {
+    "sealed_manifest.json",
+    "sealed_manifest.json.ots"
+}
+
 def compute_sha3_512(file_path: Path, chunk_size: int = 65536) -> str:
     sha3 = hashlib.sha3_512()
     with open(file_path, "rb") as f:
@@ -24,6 +29,10 @@ def stamp_with_opentimestamps(manifest_path: Path):
     if not ots_executable:
         print("[!] Warning: 'ots' command-line tool not found. Skipping blockchain timestamping.")
         return
+
+    ots_path = Path(str(manifest_path) + ".ots")
+    if ots_path.exists():
+        ots_path.unlink()
 
     print(f"[*] Submitting {manifest_path.name} to OpenTimestamps calendar servers...")
     try:
@@ -48,6 +57,9 @@ def generate_sealed_manifest():
     for pattern in TARGET_GLOBS:
         for file_path in repo_root.glob(pattern):
             if file_path.is_file() and ".git" not in file_path.parts:
+                if file_path.name in EXCLUDE_FILES:
+                    continue
+                
                 resolved_path = file_path.resolve()
                 if resolved_path in seen_files:
                     continue

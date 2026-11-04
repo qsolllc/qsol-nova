@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-11-04T10:01:18.835170+00:00",
+  "timestamp": "2026-11-04T10:05:12.712432+00:00",
   "algorithm": "SHA3-512",
-  "artifact_count": 8,
+  "artifact_count": 10,
   "artifacts": [
+    {
+      "path": ".gitleaks.toml",
+      "sha3_512": "f93af76c9eed81e438adc144df9caa8398648aacbca4a6ef350763c269ff0d613a217b4b5b6c7bd2b74ebe7ca3a5ae5b3b7c8b5b05a59eef383a1a3dd9b43182"
+    },
     {
       "path": "Cargo.toml",
       "sha3_512": "f3f1d833324110c177d0dbc6de76073281be4598ea797c7ccf61ba7b2771724945f9c9817319d3a134154f1f80d7114b2fde692b9ffb5f65a707091725354391"
+    },
+    {
+      "path": "gitleaks-report.json",
+      "sha3_512": "808ad5d3bef3395c7706d47fa895d2c870316729f3eba23ed1b5e104227cc78696c9a1f3ceb785c6e28e2a0400919858eea3e27a6f861b591886b556785d4501"
     },
     {
       "path": "scripts/seal_manifests.py",

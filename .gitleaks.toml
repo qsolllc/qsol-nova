@@ -1,0 +1,37 @@
+title = "QSol Sovereign Security Gitleaks Configuration"
+
+[allowlist]
+description = "Global allowlist for public templates and documentation schemas"
+paths = [
+    '''sealed_manifest\.json$''',
+    '''README\.md$''',
+    '''tests/.*'''
+]
+
+[[rules]]
+id = "qsol-private-key-file"
+description = "Detected QSol cryptographic private key or backup shard pattern"
+regex = '''qsol_key_[a-zA-Z0-9_\-\.]+\.(age|pem|key|dat)'''
+tags = ["key", "qsol", "secret"]
+entropy = 3.5
+
+[[rules]]
+id = "qsol-hex-secret"
+description = "Detected high-entropy hex string resembling a raw MNT4-992 private scalar or seed"
+regex = '''\b(0x)?[a-fA-F0-9]{64,128}\b'''
+tags = ["crypto", "scalar", "qsol"]
+entropy = 4.2
+
+[[rules]]
+id = "age-encryption-secret-key"
+description = "Detected Age encryption private key material"
+regex = '''AGE-SECRET-KEY-1[0-9a-z]{58}'''
+tags = ["key", "age", "encryption"]
+entropy = 3.8
+
+[[rules]]
+id = "qsol-recovery-quorum-shard"
+description = "Detected trustee master key shard reference or quorum payload"
+regex = '''qsol_shard_[0-9]_[0-9]_[a-zA-Z0-9_\-]+'''
+tags = ["shard", "quorum", "recovery"]
+entropy = 3.5

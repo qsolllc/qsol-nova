@@ -3,3 +3,6 @@
 *.bak
 /quantfold_*.dat
 /quantfold_*.dat.sig
+# Security audit reports
+*-report.json
+*.log
